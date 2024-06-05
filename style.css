@@ -1,0 +1,512 @@
+body {
+    font-family: 'Tilda', Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    gap: 850px;
+    padding: 30px 50px;
+    background-color: #000000;
+    width: 100%;
+}
+
+h5 {
+    font-size: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+footer p {
+    color: #fff;
+}
+
+.navflex {
+    display: flex;
+    justify-content: space-around;
+    gap: 850px;
+    margin-top: 25px;
+    align-items: center;
+    width: 100%;
+    ; /* Добавим фон для наглядности */
+    padding: 10px 20px; /* Добавим отступы для красоты */
+    box-sizing: border-box; /* Учтем отступы в размере */
+    position: absolute; /* Фиксируем навигационную панель */
+    top: 0; /* Прикрепляем навигацию к верху экрана */
+    left: 0; /* Выравниваем ее влево */
+    z-index: 2; /* Устанавливаем высокий z-index для навигационного меню */
+}
+
+.contacts div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    row-gap: 50px;
+}
+
+.contacts {
+    background-color: #1f2f3d;
+    width: 100%;
+    padding-bottom: 150px;
+    padding-top: 150px;
+    margin-top: 80px;
+}
+
+.contacts h1 {
+    font-size: 60px;
+    color: white;
+    font-weight: 300;
+}
+
+.contacts p {
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contacts h2 {
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.contacts span {
+    font-weight: 300;
+}
+
+
+
+.logoflex p {
+    color: white;
+    font-size: large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navflex h1 {
+    margin: 0; /* Убираем отступы у заголовка */
+}
+
+.logoflex {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Уменьшим расстояние между элементами */
+}
+
+
+.banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: min-content;
+    display: block;
+    z-index: 1; /* Устанавливаем низкий z-index для изображения */
+}
+
+.banner div {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.banner button {
+    margin-top: 40px;
+    padding: 20px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    font-size: larger;
+}
+
+.banner button:hover {
+    background-color: #555;
+}
+
+.banner-content h1 {
+    font-size: 80px;
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 100px;
+}
+
+
+.menulogo {
+    height: 30px;
+    width: auto;
+}
+
+.cardflex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.flex1{
+    display: flex;
+}
+
+.flex2 {
+    display: flex;
+    margin-top: 20px;
+}
+.product-card {
+    
+    width: 70%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    flex: 1;
+}
+
+.subcards-container {
+
+    display: none; /* Изначально скрываем подкарточки */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.subcards-container.show {
+    display: flex; /* Показываем подкарточки при нажатии на основную карточку */
+}
+
+.subcards-container .product-card {
+    width: 100%; /* Подкарточки занимают всю ширину родительского контейнера */
+    margin-top: 10px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+    cursor: pointer;
+}
+
+.product-image img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.product-info p {
+    color: #777;
+    margin: 10px 0 0;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+    z-index: 9999;
+}
+
+.popup-overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: popupOpen 0.3s ease;
+}
+
+@keyframes popupOpen {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.popup-content .main-image img {
+    display: flex;
+    justify-content: start;
+    width: auto;
+    height: 580px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.popup-content .thumbnails {
+    gap: 5px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+
+.popup-content .thumbnails img {
+    width: 50px;
+    max-width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.popup-content .thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.popup-content .description {
+    margin-top: 20px;
+    color: #555;
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: #000000;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.popup-close:hover {
+    background: #ff4c4c;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1321px) {
+    .navflex {
+        gap: 300px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    footer {
+        gap: 500px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .banner-content h1 {
+        font-size: 70px;
+        margin-top: 60px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .banner-content h1 {
+        font-size: 50px;
+        margin-top: 80px;
+    }
+
+    footer {
+        gap: 400px;
+    }
+    
+    
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* Перенести описание под изображение в попапе */
+    .content-wrapper {
+        flex-direction: column;
+    }
+    .popup-content .description {
+        margin-top: 20px;
+        color: #555;
+        order: 2; /* Изменяем порядок элементов, чтобы описание было ниже изображения */
+        text-align: start;
+    }
+
+    .popup-content .main-image {
+        order: 1; /* Изменяем порядок элементов, чтобы изображение было сверху */
+    }
+
+    footer {
+        gap: 300px;
+    }
+    /* Расположение карточек в один ряд */
+    .cardflex {
+        flex-direction: row; /* Располагаем карточки в один ряд */
+        flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку при нехватке места */
+        margin-top: 50px; /* Увеличим верхний отступ между карточками */
+    }
+
+    .product-card {
+        width: calc(50% - 20px); /* Половина ширины экрана с учетом отступов между карточками */
+        margin: 10px; /* Уменьшим отступы между карточками */
+    }
+
+    .banner-content h1 {
+        font-size: 40px; /* Уменьшаем размер заголовка */
+        margin-bottom: 50px; /* Увеличиваем отступ снизу */
+    }
+
+    .banner button {
+        padding: 15px 30px; /* Увеличиваем размер кнопки */
+        font-size: 14px; /* Уменьшаем размер текста кнопки */
+    }
+
+    /* Настройка header */
+    .navflex {
+        gap: 50px; /* Уменьшаем расстояние между элементами */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+        margin-top: 10px; /* Увеличиваем верхний отступ */
+    }
+
+    .logoflex p {
+        font-size: small; /* Уменьшаем размер текста */
+    }
+
+    .logoflex {
+        gap: 10px; /* Уменьшаем расстояние между элементами */
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    footer {
+        gap: 210px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+  
+      footer {
+        gap: 15px;
+        align-items: center;
+      }
+    
+      .content-wrapper {
+       
+        margin: auto;
+        width: 100%;
+        padding: 70px;
+        
+      }
+
+    
+
+      .menulogo {
+        display: block;
+        margin: 20px auto;
+      }
+    
+    
+        .flex1 {
+            display: block;
+        }
+        .flex2 {
+            display: block;
+        }
+        .product-card {
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .product-info h3 {
+            font-size: 16px;
+        }
+    
+        .product-info p {
+            font-size: 14px;
+        }
+    
+        .popup-content {
+            padding: 5px;
+        }
+    
+        .main-image img {
+            height: auto;
+            max-height: 300px;
+        }
+    
+        .thumbnails img {
+            width: 30px;
+            max-width: 50px;
+        }
+    
+        .popup-close {
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .thumbnails {
+            margin: auto;
+            width: 100%;
+            padding: 10px;
+        }
+}
