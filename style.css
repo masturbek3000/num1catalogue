@@ -480,6 +480,9 @@ body {
     .slide:first-child .banner-image {
         content: url(/тел.jpg); /* Replace with the actual path of the new image */
     }
+    .slide:nth-child(2) .banner-image {
+      content: url(/images/bantel3.jpg);
+  }
         .wk-mobile-1 {
     width: 8.333333%;
   }

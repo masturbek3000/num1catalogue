@@ -627,6 +627,48 @@ function closePopup() {
 }
  
        
+function openPopup44(imageSrc, thumbnailList, description) {
+    // Устанавливаем главное изображение
+    description = `
+    Формат - A4
+    Количество листов - 96
+    Плотность бумаги - 55 г/м2
+    Обложка - мелованный картон 
+    Скрепление - скоба
+    Материал блока - бумага офсетная`;
+
+    imageSrc = '/Каталог 2024-2025/8 Деловой Журанл/1 Д. Журнал А5 96/journal3.jpg',
+    document.getElementById('mainImage').src = imageSrc;
+    thumbnails = [imageSrc, ...thumbnailList]; // Initialize the thumbnails array
+
+
+    // Создаем маленькие изображения (thumbnails)
+    const thumbnailsContainer = document.querySelector('.popup-content .thumbnails');
+    thumbnailsContainer.innerHTML = '';
+    thumbnailList.forEach(function (thumbnailSrc, index) {
+        const thumbnailImg = document.createElement('img');
+        thumbnailImg.src = thumbnailSrc;
+        thumbnailImg.alt = 'Маленькое изображение';
+        thumbnailImg.addEventListener('click', function () {
+            document.getElementById('mainImage').src = thumbnailSrc;
+            currentIndex = index + 1; // Update currentIndex
+        });
+        thumbnailsContainer.appendChild(thumbnailImg);
+    });
+
+    // Устанавливаем описание
+    document.querySelector('.popup-content .description').innerText = description;
+
+    // Показываем Popup
+    document.getElementById('popup').classList.add('show');
+}
+
+// Функция для закрытия Popup
+function closePopup() {
+    document.getElementById('popup').classList.remove('show');
+}
+ 
+       
 function openPopup12(imageSrc, thumbnailList, description) {
     // Устанавливаем главное изображение
     description = `
@@ -711,48 +753,6 @@ function closePopup() {
 }
  
        
-function openPopup14(imageSrc, thumbnailList, description) {
-    // Устанавливаем главное изображение
-    description = `
-    Формат - A5
-    Количество листов - 96
-    Плотность бумаги - 55 г/м2
-    Обложка - матовая ламинация 
-    Скрепление - твердый переплет
-    Материал блока - бумага офсетная`;
-
-    imageSrc = '/Каталог 2024-2025/8 Деловой Журанл/1 Д. Журнал А5 96/1.jpg'
-    document.getElementById('mainImage').src = imageSrc;
-    thumbnails = [imageSrc, ...thumbnailList]; // Initialize the thumbnails array
-
-
-    // Создаем маленькие изображения (thumbnails)
-    const thumbnailsContainer = document.querySelector('.popup-content .thumbnails');
-    thumbnailsContainer.innerHTML = '';
-    thumbnailList.forEach(function (thumbnailSrc, index) {
-        const thumbnailImg = document.createElement('img');
-        thumbnailImg.src = thumbnailSrc;
-        thumbnailImg.alt = 'Маленькое изображение';
-        thumbnailImg.addEventListener('click', function () {
-            document.getElementById('mainImage').src = thumbnailSrc;
-            currentIndex = index + 1; // Update currentIndex
-        });
-        thumbnailsContainer.appendChild(thumbnailImg);
-    });
-
-    // Устанавливаем описание
-    document.querySelector('.popup-content .description').innerText = description;
-
-    // Показываем Popup
-    document.getElementById('popup').classList.add('show');
-}
-
-// Функция для закрытия Popup
-function closePopup() {
-    document.getElementById('popup').classList.remove('show');
-}
- 
-       
 function openPopup15(imageSrc, thumbnailList, description) {
     // Устанавливаем главное изображение
     description = `
@@ -794,128 +794,6 @@ function closePopup() {
     document.getElementById('popup').classList.remove('show');
 }
  
-       
-function openPopup16(imageSrc, thumbnailList, description) {
-    // Устанавливаем главное изображение
-    description = `
-    Тетрадь - 48 листов
-    Обложка - мелованный картон 190 грамм
-    Внутренний блок - офсет 55 гр., клетка, красные поля
-    Скрепление - скоба
-    Формат - 170x205`;
-
-    imageSrc = '/images/36/IMAGE 2024-06-10 14:30:18.jpg'
-    document.getElementById('mainImage').src = imageSrc;
-    thumbnails = [imageSrc, ...thumbnailList]; // Initialize the thumbnails array
-
-
-    // Создаем маленькие изображения (thumbnails)
-    const thumbnailsContainer = document.querySelector('.popup-content .thumbnails');
-    thumbnailsContainer.innerHTML = '';
-    thumbnailList.forEach(function (thumbnailSrc, index) {
-        const thumbnailImg = document.createElement('img');
-        thumbnailImg.src = thumbnailSrc;
-        thumbnailImg.alt = 'Маленькое изображение';
-        thumbnailImg.addEventListener('click', function () {
-            document.getElementById('mainImage').src = thumbnailSrc;
-            currentIndex = index + 1; // Update currentIndex
-        });
-        thumbnailsContainer.appendChild(thumbnailImg);
-    });
-
-    // Устанавливаем описание
-    document.querySelector('.popup-content .description').innerText = description;
-
-    // Показываем Popup
-    document.getElementById('popup').classList.add('show');
-}
-
-// Функция для закрытия Popup
-function closePopup() {
-    document.getElementById('popup').classList.remove('show');
-}
- 
-       
-function openPopup17(imageSrc, thumbnailList, description) {
-    // Устанавливаем главное изображение
-    description = `
-    Тетрадь - 48 листов
-    Обложка - мелованный картон 190 грамм
-    Внутренний блок - офсет 55 гр., клетка, красные поля
-    Скрепление - скоба
-    Формат - 170x205`;
-
-    imageSrc = '/images/36/IMAGE 2024-06-10 14:30:18.jpg'
-    document.getElementById('mainImage').src = imageSrc;
-    thumbnails = [imageSrc, ...thumbnailList]; // Initialize the thumbnails array
-
-
-    // Создаем маленькие изображения (thumbnails)
-    const thumbnailsContainer = document.querySelector('.popup-content .thumbnails');
-    thumbnailsContainer.innerHTML = '';
-    thumbnailList.forEach(function (thumbnailSrc, index) {
-        const thumbnailImg = document.createElement('img');
-        thumbnailImg.src = thumbnailSrc;
-        thumbnailImg.alt = 'Маленькое изображение';
-        thumbnailImg.addEventListener('click', function () {
-            document.getElementById('mainImage').src = thumbnailSrc;
-            currentIndex = index + 1; // Update currentIndex
-        });
-        thumbnailsContainer.appendChild(thumbnailImg);
-    });
-
-    // Устанавливаем описание
-    document.querySelector('.popup-content .description').innerText = description;
-
-    // Показываем Popup
-    document.getElementById('popup').classList.add('show');
-}
-
-// Функция для закрытия Popup
-function closePopup() {
-    document.getElementById('popup').classList.remove('show');
-}
- 
-       
-function openPopup18(imageSrc, thumbnailList, description) {
-    // Устанавливаем главное изображение
-    description = `
-    Тетрадь - 48 листов
-    Обложка - мелованный картон 190 грамм
-    Внутренний блок - офсет 55 гр., клетка, красные поля
-    Скрепление - скоба
-    Формат - 170x205`;
-
-    imageSrc = '/images/36/IMAGE 2024-06-10 14:30:18.jpg'
-    document.getElementById('mainImage').src = imageSrc;
-    thumbnails = [imageSrc, ...thumbnailList]; // Initialize the thumbnails array
-
-
-    // Создаем маленькие изображения (thumbnails)
-    const thumbnailsContainer = document.querySelector('.popup-content .thumbnails');
-    thumbnailsContainer.innerHTML = '';
-    thumbnailList.forEach(function (thumbnailSrc, index) {
-        const thumbnailImg = document.createElement('img');
-        thumbnailImg.src = thumbnailSrc;
-        thumbnailImg.alt = 'Маленькое изображение';
-        thumbnailImg.addEventListener('click', function () {
-            document.getElementById('mainImage').src = thumbnailSrc;
-            currentIndex = index + 1; // Update currentIndex
-        });
-        thumbnailsContainer.appendChild(thumbnailImg);
-    });
-
-    // Устанавливаем описание
-    document.querySelector('.popup-content .description').innerText = description;
-
-    // Показываем Popup
-    document.getElementById('popup').classList.add('show');
-}
-
-// Функция для закрытия Popup
-function closePopup() {
-    document.getElementById('popup').classList.remove('show');
-}
  
        
 function openPopup19(imageSrc, thumbnailList, description) {
@@ -1378,7 +1256,7 @@ function openPopup31(imageSrc, thumbnailList, description) {
     Плотность бумаги - 55 г/м2
     Обложка - глянцевая ламинация 
     Скрепление - твердый переплет 
-    Материал блока - бумага офсетна5`;
+    Материал блока - бумага офсетная`;
 
     imageSrc = '/Каталог 2024-2025/9 Журнал/1 Д. Журнал 80 желтый/1.jpg'
     document.getElementById('mainImage').src = imageSrc;
